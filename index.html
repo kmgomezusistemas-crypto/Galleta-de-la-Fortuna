@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galleta de la Fortuna</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(to bottom, #fff3d6, #ffe0a3);
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+#galleta {
+  width: 250px;
+  margin-top: 30px;
+}
+
+#mensaje {
+  margin: 20px auto;
+  padding: 15px;
+  width: 70%;
+  max-width: 300px;
+  background: white;
+  border-radius: 10px;
+  font-size: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #ff9800;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>🍪 Tu mensaje del día</h1>
+
+<img id="galleta" src="galleta_abierta.png">
+
+<div id="mensaje"></div>
+
+<button onclick="nuevoMensaje()">Otra fortuna 🍀</button>
+
+<script>
+const mensajes = [
+  "Respira profundo durante 1 minuto 🌿",
+  "Hoy haz una pausa y agradece 💛",
+  "Confía en tu proceso 💫",
+  "Dedica 5 minutos solo para ti 🧘‍♀️",
+  "Eres más fuerte de lo que crees 💪",
+  "Inhala calma, exhala estrés 🌬️",
+  "Tu paz es prioridad 🕊️",
+  "Sonríe, lo estás haciendo bien 😊"
+];
+
+function nuevoMensaje() {
+  const random = Math.floor(Math.random() * mensajes.length);
+  document.getElementById("mensaje").innerText = mensajes[random];
+}
+
+window.onload = nuevoMensaje;
+</script>
+
+</body>
+</html>
